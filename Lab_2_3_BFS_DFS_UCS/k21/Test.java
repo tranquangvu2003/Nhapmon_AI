@@ -21,9 +21,10 @@ public class Test {
 		nodeD.addEdge(nodeH, 7);
 		nodeE.addEdge(nodeG, 6);
 		nodeF.addEdge(nodeG, 1);
-		ISearchAlgo algo1 = new BFSGraphSearchAIgo();
-		Node result = algo1.execute(nodeS,"A", "G");
-		
+//		ISearchAlgo algo1 = new UCS();
+//		Node result = algo1.execute(nodeA,"S", "G");
+		DepthLimitedSearchAlgo algo1 = new DepthLimitedSearchAlgo();
+		Node result = algo1.execute(nodeS, "G", 4);
 //		ISearchAlgo algo2 = new DFSGraphSearchAIgo();
 //		Node result = algo2.execute(nodeS,"A","G");
 		System.out.println(NodeUtils.printPath(result));
